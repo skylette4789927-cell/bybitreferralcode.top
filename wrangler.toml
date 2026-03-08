@@ -1,0 +1,15 @@
+# Cloudflare Pages 配置
+name = "bybitreferralcode"
+compatibility_date = "2026-03-07"
+
+# 构建配置
+[build]
+command = "npm run build"
+output_directory = "dist"
+
+# 环境变量
+[env.production]
+NODE_ENV = "production"
+
+[env.preview]
+NODE_ENV = "production"

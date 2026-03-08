@@ -1,0 +1,30 @@
+# Cloudflare Pages 自定义 HTTP Headers
+
+# 安全响应头
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# 静态资源缓存
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 图片缓存
+/*.png
+  Cache-Control: public, max-age=86400
+/*.jpg
+  Cache-Control: public, max-age=86400
+/*.jpeg
+  Cache-Control: public, max-age=86400
+/*.svg
+  Cache-Control: public, max-age=86400
+/*.webp
+  Cache-Control: public, max-age=86400
+
+# XML 和 TXT 文件
+/*.xml
+  Content-Type: application/xml
+/*.txt
+  Content-Type: text/plain

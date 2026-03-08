@@ -1,0 +1,12 @@
+# Cloudflare Pages 重定向规则
+
+# 根路径重定向到英文版本
+/ /en/ 302
+
+# 确保所有路径都以斜杠结尾（SEO 优化）
+/en /en/ 301
+/vi /vi/ 301
+/id /id/ 301
+
+# 旧路径重定向（如果有的话）
+# /old-path /new-path 301
